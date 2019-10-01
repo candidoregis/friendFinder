@@ -7,7 +7,8 @@ var app = express();
 var PORT = process.env.PORT || 3090;
 
 // MIDDLEWARE
-app.use(express.static(path.join(__dirname, "app/public"), {maxAge: 3456700000}));
+app.set("css", path.join(__dirname,"css"));  //not working
+app.use(express.static(path.join(__dirname, "app/public"), {maxAge: 3456700000})); //not working
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

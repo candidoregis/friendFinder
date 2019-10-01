@@ -13,6 +13,38 @@ module.exports = function (app) {
             friendPhoto: "",
             friendsDistancePoints: 100
         }
+        console.log("------------------------------ BEST MATCH START ");
+        console.log(bestMatch);
 
+        var userData = req.body;
+        
+        var userScores = userData.scores;
+        //var userName = userData.name;
+        //var userPhoto = userData.photo;
+
+        console.log("------------------------------ USER DATA ");
+        console.log(userData);
+
+        var distancePoints = 0;
+
+        for (var i = 0; i < friends.length-1; i++){
+            distancePoints = 0;
+            for(var j = 0; j < 10; j++){
+                distancePoints += Math.abs( userScores[j] - friends[i].scores[j]);
+                console.log("------------------------------ DISTANCE POINTS ");
+                console.log(distancePoints);
+            }
+            if(distancePoints < bestMatch.friendsDistancePoints){
+                bestMatch.friendName = friends[i].name;
+                bestMatch.friendPhoto = friends[i].photo;
+                bestMatch.friendsDistancePoints = friends[i].distancePoints;
+            }
+        }
+        friends.push(userData);
+
+        console.log("------------------------------ BEST MATCH END");
+        console.log(bestMatch);
+
+        res.json(bestMatch);
     });
 };
