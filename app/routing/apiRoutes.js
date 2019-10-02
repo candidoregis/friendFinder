@@ -24,24 +24,24 @@ module.exports = function (app) {
 
         console.log("------------------------------ USER DATA ");
         console.log(userData);
-        console.log("------------------------------ USER SCORE ");
-        console.log(userScores);
+        // console.log("------------------------------ USER SCORE ");
+        // console.log(userScores);
         var distancePoints = 0;
 
         for (var i = 0; i < friends.length-1; i++){
             distancePoints = 0;
             for(var j = 0; j < 10; j++){
-                console.log("------------------------------ USER SCORE ");
-                console.log(userScores);
+                // console.log("------------------------------ USER SCORE ");
+                // console.log(userScores);
                 distancePoints += Math.abs( parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
-                console.log("------------------------------ DISTANCE POINTS ");
-                console.log(distancePoints);
             }
             if(distancePoints < bestMatch.friendsDistancePoints){
                 bestMatch.friendName = friends[i].name;
                 bestMatch.friendPhoto = friends[i].photo;
-                bestMatch.friendsDistancePoints = friends[i].distancePoints;
+                bestMatch.friendsDistancePoints = distancePoints;
             }
+            console.log("------------------------------ DISTANCE POINTS ");
+            console.log(distancePoints);
         }
         friends.push(userData);
 
