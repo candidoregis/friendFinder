@@ -14,7 +14,7 @@
 </head>
 
 <body>
-
+  <!-- PAGE HEADER - survey page -->
   <header>
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
@@ -27,6 +27,7 @@
 
   <hr>
 
+  <!-- MAIN PAGE - user form, survey questions -->
   <main>
     <div class="container">
 
@@ -169,6 +170,7 @@
   </main>
   <hr>
 
+  <!-- PAGE FOOTER - survey page -->
   <footer class="footer">
     <div class="container">
       <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub
@@ -177,7 +179,7 @@
   </footer>
 
 
-  <!-- Modal -->
+  <!-- MODAL - best friends results -->
   <div id="resultModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
@@ -215,9 +217,11 @@
 
   <script type="text/javascript">
 
+    // SUBMIT FUNCTION
     $("#submitBtn").on("click", function (event) {
       event.preventDefault();
 
+      // Validates if the user filled all fields (forms and questions) and returns the userData object
       function validateUserForm() {
         var isValid = true;
 
@@ -254,13 +258,10 @@
           ]
         };
 
+        // Post function that will display the best friend's match results
         $.post("/api/friends", userData, function (data) {
           $("#bestFriend-name").text(data.friendName);
-          console.log("------------------------------ BEST MATCH NAME ");
-          console.log(data.friendName);
           $("#bestFriend-photo").attr("src", data.friendPhoto);
-          console.log("------------------------------ BEST MATCH PHOTO ");
-          console.log(data.friendPhoto);
           $("#resultModal").modal("toggle");
         });
 
@@ -268,9 +269,6 @@
         alert("Please fill out all fields before submitting!");
       }
     });
-
-
-
 
   </script>
 

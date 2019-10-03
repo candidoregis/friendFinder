@@ -1,11 +1,13 @@
-// var path = require("path");
+
 var friends = require("../data/friends.js");
 
 module.exports = function (app) {
+    // GET FUNCTION THAT WILL RETURN THE FRIENDS LIST
     app.get("/data/friends", function (req, res) {
         return res.json(friends);
     });
 
+    // POST FUNCTION THAT WILL BE EXECUTED WHEN THE USER CLICKS ON THE SUBMIT BUTTON
     app.post("/api/friends", function (req, res) {
 
         var bestMatch = {
@@ -13,26 +15,18 @@ module.exports = function (app) {
             friendPhoto: "",
             friendsDistancePoints: 100
         }
-        console.log("------------------------------ BEST MATCH START ");
-        console.log(bestMatch);
 
         var userData = req.body;
         
         var userScores = userData.userScores;
-        //var userName = userData.name;
-        //var userPhoto = userData.photo;
 
-        console.log("------------------------------ USER DATA ");
-        console.log(userData);
-        // console.log("------------------------------ USER SCORE ");
-        // console.log(userScores);
         var distancePoints = 0;
 
+        // Go through all friends' score and returning the distance points from each question
+        // then adding them and verify which one has the smaller difference and returning it
         for (var i = 0; i < friends.length-1; i++){
             distancePoints = 0;
             for(var j = 0; j < 10; j++){
-                // console.log("------------------------------ USER SCORE ");
-                // console.log(userScores);
                 distancePoints += Math.abs( parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
             }
             if(distancePoints < bestMatch.friendsDistancePoints){
@@ -40,13 +34,8 @@ module.exports = function (app) {
                 bestMatch.friendPhoto = friends[i].photo;
                 bestMatch.friendsDistancePoints = distancePoints;
             }
-            console.log("------------------------------ DISTANCE POINTS ");
-            console.log(distancePoints);
         }
         friends.push(userData);
-
-        console.log("------------------------------ BEST MATCH END");
-        console.log(bestMatch);
 
         res.json(bestMatch);
     });

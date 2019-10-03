@@ -1,3 +1,4 @@
+// LIST OF FRIENDS
 var friends = [
     
     {
