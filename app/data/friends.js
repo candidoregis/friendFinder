@@ -2,7 +2,7 @@ var friends = [
     
     {
 		name: "Serena Van Der Woodsen ",
-		photo: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiCw4z4gYrkAhVDmeAKHXAKDOwQjRx6BAgBEAQ&url=http%3A%2F%2Fknotsandruffles.blogspot.com%2F2015%2F05%2Fget-look-serena-van-der-woodsen-makeup.html&psig=AOvVaw2Z6yOrEIbBpBmIfls7obyn&ust=1566135066520198",
+		photo: "http://1.bp.blogspot.com/-Qu5UOMfkU4k/VBzbthaiwhI/AAAAAAAAEfk/w1h4nRlWYEg/s1600/Blake-Lively.jpg",
 		scores: [
             3, 
             5, 
@@ -18,7 +18,7 @@ var friends = [
     
     {
 		name: "Jensen Ackles",
-		photo: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjlrrTIgorkAhXoV98KHenSBaIQjRx6BAgBEAQ&url=https%3A%2F%2Fsupernatural.fandom.com%2Fwiki%2FJensen_Ackles&psig=AOvVaw0NQ2jusYY06SYXwDJKSL8e&ust=1566135239073903",
+		photo: "https://bloximages.newyork1.vip.townnews.com/nola.com/content/tncms/assets/v3/editorial/4/e2/4e210791-2b33-588e-987c-a64af3b182de/5cdc7bb24f00b.image.jpg",
 		scores: [
             3, 
             2, 
@@ -35,7 +35,7 @@ var friends = [
     
     {
 		name: "Karl Urban",
-		photo: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjb7dD-gorkAhWQUt8KHWhjC-YQjRx6BAgBEAQ&url=https%3A%2F%2Fdisney.fandom.com%2Fwiki%2FKarl_Urban&psig=AOvVaw2qLdfGbl8zr_jL7MDqSpDK&ust=1566135342364656",
+		photo: "https://upload.wikimedia.org/wikipedia/commons/5/56/Karl_Urban_by_Gage_Skidmore.jpg",
 		scores: [
             3, 
             3, 
@@ -52,7 +52,7 @@ var friends = [
     
     {
 		name: "Grazi Massafera",
-		photo: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjXwp2tg4rkAhVRmuAKHRC8A4gQjRx6BAgBEAQ&url=https%3A%2F%2Fodia.ig.com.br%2Fdiversao%2Fcelebridades%2F2019%2F08%2F5672071--sou-intensa-por-natureza---revela-grazi-massafera.html&psig=AOvVaw39t7bKxMtjfpmFmKIOLA6k&ust=1566135445863289",
+		photo: "https://www.diariodocentrodomundo.com.br/wp-content/uploads/2018/08/grazi-massafera.jpg",
 		scores: [
             1, 
             4, 
@@ -69,7 +69,7 @@ var friends = [
     
     {
 		name: "Gisele Bündchen",
-		photo: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjoy7Hng4rkAhVjkuAKHbBzBY0QjRx6BAgBEAQ&url=http%3A%2F%2Ftribunaonline.com.br%2Fgisele-buendchen-coloca-mansao-em-boston-a-venda-por-r-165-milhoes&psig=AOvVaw1rBaBfkuGmcjLzt-amJpND&ust=1566135573107208",
+		photo: "https://www.thefix.com/sites/default/files/styles/article/public/giselle.jpg",
 		scores: [
             5, 
             5, 
@@ -86,7 +86,7 @@ var friends = [
     
     {
 		name: "Cauã Reymond",
-		photo: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwj0tJichIrkAhUqh-AKHdPzBDEQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.metropoles.com%2Fcolunas-blogs%2Fpipocando%2Fja-sofri-muito-preconceito-desabafa-caua-reymond-sobre-ser-ator&psig=AOvVaw0EaxF4SZf6caRqLXOm_Y4F&ust=1566135679436062",
+		photo: "https://data.whicdn.com/images/154852056/original.png",
 		scores: [
             2, 
             3, 
